@@ -14,3 +14,5 @@ def ocr():
     img_path = './output_imgs/img.jpg'
     img.save(img_path)
     product = return_product(img_path)
+
+    return jsonify(product)
