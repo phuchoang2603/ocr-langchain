@@ -1,6 +1,4 @@
 .venv/
-test_imgs/
-output_imgs/
 *.txt
 *.pyc
 .env
