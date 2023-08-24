@@ -1,0 +1,7 @@
+opencv-python
+Flask==2.3.3
+HTMLParser==0.0.2
+lxml==4.9.3
+numpy==1.25.2
+Pillow==10.0.0
+pyzbar==0.1.9
