@@ -1,6 +1,6 @@
 
 FROM python:3.8-slim-buster
-RUN apt-get update && \
+RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y && \
     apt-get install zbar-tools -y && \
     pip install --upgrade pip 
 # Allow statements and log messages to immediately appear in the Knative logs
