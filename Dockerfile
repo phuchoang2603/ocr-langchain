@@ -1,9 +1,8 @@
 
 FROM python:3.8-slim-buster
 RUN apt-get update && \
-    apt-get install -y build-essential libzbar-dev && \
-    pip install --upgrade pip \
-    pip install zbar 
+    apt-get install zbar-tools && \
+    pip install --upgrade pip 
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
 
