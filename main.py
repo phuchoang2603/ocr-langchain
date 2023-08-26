@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import urllib.request
 import os
 from os import mkdir
 import os.path as path
@@ -11,11 +12,12 @@ if(not(path.exists('./output'))):
 
 app = Flask(__name__)
 
-@app.route('/ocr', methods=['POST'])
+@app.route('/', methods=['POST'])
 def ocr():
-    img = request.files['img']
+    img_url = request.args.get('url')
     img_path = './output/img.jpg'
-    img.save(img_path)
+    # download image from the img_url to img_path
+    urllib.request.urlretrieve(img_url, img_path)
     product = return_product(img_path)
     query = "Hướng dẫn phân biệt hàng thật hàng giả " + product['title'] + ", trả lời theo ngôn ngữ tiếng việt, liệt kê các cách và đánh số thứ tự"
 
