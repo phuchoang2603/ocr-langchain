@@ -56,4 +56,4 @@ def return_product(path):
 
     return result
 
-print(return_product('./test_imgs/2.jpg'))
+# print(return_product('./test_imgs/2.jpg'))
