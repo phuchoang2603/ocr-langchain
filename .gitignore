@@ -1,3 +1,5 @@
 .venv/
 *.pyc
+output/
+test_imgs/
 ```
