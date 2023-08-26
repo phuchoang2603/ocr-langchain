@@ -1,5 +1,7 @@
 # Flask Backend API Server for Barcode Scanning and LangChain Instruction Handling
 
+Current API Endpoint, hosting at: https://hammerhead-app-qlv3d.ondigitalocean.app/
+
 This repository contains the code for a custom API server designed to facilitate barcode scanning using PyZbar and instruction handling through LangChain. The purpose of this server is to provide users with a simple and efficient way to scan barcodes and receive relevant instructions based on the scanned data.
 
 The server is built using the Flask framework, which offers a lightweight and flexible environment for building web applications in Python. Flask allows us to handle incoming HTTP requests and provide appropriate responses.
