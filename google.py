@@ -27,9 +27,9 @@ def search_product_links (query):
     query_string = urllib.parse.urlencode(data)
     url = "https://www.googleapis.com/customsearch/v1?" + query_string
 
-    # Make the HTTP request and get ten url to provide the model
+    # Make the HTTP request and get url to provide the model
     response = requests.get(url)
-    data = response.json()["items"][:10]
+    data = response.json()["items"]
 
     # Return list of urls in json format
     output = []

@@ -1,6 +1,7 @@
 from pyzbar import pyzbar
 import cv2
 import requests
+import urllib.request
 from lxml import html
 import re
 
@@ -35,9 +36,12 @@ def lookup_barcode (barcode):
     except:
         return "Not found the product"
 
-def return_product(path):
+def return_product(img_url):
+    img_path = './output/img.jpg'
+    # download image from the img_url to img_path
+    urllib.request.urlretrieve(img_url, img_path)
     # get the image
-    image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+    image = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
 
     # # read the barcode
     number = read_barcode(image)
@@ -56,4 +60,4 @@ def return_product(path):
 
     return result
 
-# print(return_product('./test_imgs/2.jpg'))
+print(return_product('https://i.ibb.co/v4pGh5R/1693057428727211.jpg'))
